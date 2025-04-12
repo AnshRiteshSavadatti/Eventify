@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "name": "Taylor Swift | The Eras Tour",
+      "address": "SoFi Stadium, Inglewood, California",
+      "cost": 250,
+      "image": "https://upload.wikimedia.org/wikipedia/en/7/75/The_Eras_Tour_Poster_%28updated%29.png",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Coldplay - Music of the Spheres Tour",
+      "address": "Wembley Stadium, London",
+      "cost": 180,
+      "image": "https://upload.wikimedia.org/wikipedia/en/7/79/Music_of_the_Spheres_World_Tour_Poster.png",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Ed Sheeran: +–=÷× Tour",
+      "address": "MetLife Stadium, East Rutherford, New Jersey",
+      "cost": 120,
+      "image": "https://upload.wikimedia.org/wikipedia/en/5/50/Ed_Sheeran_mathematics_tour_dates.jpeg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Billie Eilish: Happier Than Ever Tour",
+      "address": "O2 Arena, London, UK",
+      "cost": 200,
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/91/Billie_Eilish_-_Happier_Than_Ever%2C_The_World_Tour.png?20220207020442",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Imagine Dragons - Mercury World Tour",
+      "address": "TD Garden, Boston, MA",
+      "cost": 150,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Mercury_Tour_Imagine_Dragons.jpg/500px-Mercury_Tour_Imagine_Dragons.jpg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "The Weeknd - After Hours Til Dawn Tour",
+      "address": "BC Place, Vancouver, Canada",
+      "cost": 190,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e7/Weeknd_After_Hours_in_Dawn_Stadium_Tour_poster.jpeg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Adele: Weekends With Adele",
+      "address": "The Colosseum, Caesars Palace, Las Vegas",
+      "cost": 300,
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/b4/Weekends_with_Adele_residency_poster.jpg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "BTS - Permission to Dance On Stage",
+      "address": "Allegiant Stadium, Las Vegas, Nevada",
+      "cost": 220,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Bangtan_Boys_at_the_Incheon_Music_Center_in_September_2013_02.jpg/1200px-Bangtan_Boys_at_the_Incheon_Music_Center_in_September_2013_02.jpg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Bruno Mars - Live in Concert",
+      "address": "Dolby Live at Park MGM, Las Vegas",
+      "cost": 175,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/BrunoMars24KMagicWorldTourLive_%28cropped%29.jpg/330px-BrunoMars24KMagicWorldTourLive_%28cropped%29.jpg",
+      "seats": 500,
+      "booked": 0
+    },
+    {
+      "name": "Red Hot Chili Peppers - Global Stadium Tour",
+      "address": "Civic Stadium, Osaka, Japan",
+      "cost": 160,
+      "image": "https://upload.wikimedia.org/wikipedia/en/d/d3/Red_Hot_Chili_Peppers_-_Unlimited_Love_Tour.png?20241219000742",
+      "seats": 500,
+      "booked": 0
+    }
+  ]
+}
