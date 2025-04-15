@@ -15,7 +15,7 @@ function Shows() {
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {shows.map((show) => (
           <ShowItems
-            key={show.id}
+            key={show.name}
             image={show.image}
             cost={show.cost}
             name={show.name}

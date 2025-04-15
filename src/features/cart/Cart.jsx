@@ -13,7 +13,6 @@ function Cart() {
     e.preventDefault();
 
     const doc = new jsPDF();
-
     const imageUrl = "/Eventify.png"; // relative to public
 
     fetch(imageUrl)
@@ -23,10 +22,10 @@ function Cart() {
         reader.onloadend = function () {
           const base64data = reader.result;
 
-          // 📌 Add image at top-left corner
-          doc.addImage(base64data, "PNG", 150, 10, 40, 20); // x, y, width, height
+          // 📌 Add image at top-right corner
+          doc.addImage(base64data, "PNG", 150, 10, 40, 20);
 
-          // 📝 Title with username
+          // 📝 Title
           doc.setFontSize(18);
           doc.text(`${username}'s Tickets and Bill`, 20, 20);
 
@@ -36,17 +35,42 @@ function Cart() {
               item.name,
               item.address,
               `₹${item.cost}`,
+              item.quantity,
+              `₹${item.cost * item.quantity}`,
             ]);
 
             autoTable(doc, {
-              head: [["#", "Name", "Address", "Cost"]],
+              head: [
+                ["#", "Name", "Address", "Cost", "Quantity", "Total Cost"],
+              ],
               body: tableData,
               startY: 35,
+              styles: {
+                cellPadding: 3,
+                fontSize: 10,
+                overflow: "linebreak",
+              },
+              columnStyles: {
+                0: { cellWidth: 10 }, // #
+                1: { cellWidth: 40 }, // Name
+                2: { cellWidth: 50 }, // Address
+                3: { cellWidth: 20 }, // Cost
+                4: { cellWidth: 20 }, // Quantity
+                5: { cellWidth: 30 }, // Total Cost
+              },
             });
 
-            const total = items.reduce((acc, item) => acc + item.cost, 0);
+            const total = items.reduce(
+              (acc, item) => acc + item.cost * item.quantity,
+              0
+            );
+
             doc.setFontSize(14);
-            doc.text(`Total: ₹${total}`, 20, doc.lastAutoTable.finalY + 10);
+            doc.text(
+              `Grand Total: ₹${total}`,
+              20,
+              doc.lastAutoTable.finalY + 10
+            );
           } else {
             doc.text("Cart is empty.", 20, 35);
           }

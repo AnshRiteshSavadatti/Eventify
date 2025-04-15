@@ -19,9 +19,38 @@ const cartSlice = createSlice({
       // payload = item ID
       state.items = state.items.filter((item) => item.name !== action.payload);
     },
+    incrementItemQuantity(state, action) {
+      // payload = item Name
+      state.items = state.items.map((item) =>
+        item.name === action.payload
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    },
+    decrementItemQuantity(state, action) {
+      // payload = item Name
+      // const item = state.items.filter((item) => item.name === action.payload);
+      // if (item.quantity === 1) {
+      //   deleteItem(item.name);
+      //   return;
+      // }
+      state.items = state.items
+        .map((item) =>
+          item.name === action.payload
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0);
+    },
   },
 });
 
-export const { deleteItem, addItem, clearCart } = cartSlice.actions;
+export const {
+  deleteItem,
+  addItem,
+  clearCart,
+  incrementItemQuantity,
+  decrementItemQuantity,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

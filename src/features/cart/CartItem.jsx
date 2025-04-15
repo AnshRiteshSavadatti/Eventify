@@ -1,12 +1,22 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "../../UI/Button";
-import { deleteItem } from "./cartSlice";
+import {
+  decrementItemQuantity,
+  deleteItem,
+  incrementItemQuantity,
+} from "./cartSlice";
 
 function CartItem({ name, address, cost }) {
   const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.items);
 
   function handleClick(e, name) {
     dispatch(deleteItem(name));
+  }
+
+  function ticketQuantity(name) {
+    const item = items.find((item) => item.name === name);
+    return item?.quantity || 0;
   }
 
   return (
@@ -17,9 +27,26 @@ function CartItem({ name, address, cost }) {
           <p className="text-gray-600">{address}</p>
           <p className="text-red-600 font-medium">{cost} per ticket</p>
         </div>
-        <Button type="primary" onClick={(e) => handleClick(e, name)}>
-          Delete
-        </Button>
+        <div className="flex flex-col gap-2">
+          <div className="">
+            <Button
+              type="small"
+              onClick={() => dispatch(decrementItemQuantity(name))}
+            >
+              -
+            </Button>
+            <span className="mx-2">{ticketQuantity(name)}</span>
+            <Button
+              type="small"
+              onClick={() => dispatch(incrementItemQuantity(name))}
+            >
+              +
+            </Button>
+          </div>
+          <Button type="primary" onClick={(e) => handleClick(e, name)}>
+            Delete
+          </Button>
+        </div>
       </div>
     </div>
   );
