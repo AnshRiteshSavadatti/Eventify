@@ -6,6 +6,11 @@ import Error from "./UI/Error";
 import HomePage from "./UI/HomePage";
 import Cart from "./features/cart/Cart";
 import Shows, { loader as showLoder } from "./features/shows/Shows";
+import AdminLogin from "./admin/AdminLogin";
+import AdminModifyEvents from "./admin/AdminModifyEvents";
+import AdminDeleteItems, {
+  loader as adminDeleteLoader,
+} from "./admin/AdminDeleteItems";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +29,19 @@ const router = createBrowserRouter([
         path: "/shows",
         element: <Shows />,
         loader: showLoder,
+      },
+      {
+        path: "/admin",
+        element: <AdminLogin />,
+      },
+      {
+        path: "/modifyevent",
+        element: <AdminModifyEvents />,
+      },
+      {
+        path: "/deleteevent",
+        element: <AdminDeleteItems />,
+        loader: adminDeleteLoader,
       },
     ],
   },

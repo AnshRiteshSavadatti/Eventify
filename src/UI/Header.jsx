@@ -9,7 +9,7 @@ function Header() {
       <Link to="/" className="tracking-widest italic ">
         <img src="/Eventify-removebg-preview.png" className="h-24 w-30" />
       </Link>
-      <input type="text" placeholder="Ed Sheeran: +–=÷× Tour" className="input"/>
+      {/* <input type="text" placeholder="Ed Sheeran: +–=÷× Tour" className="input"/> */}
       {username && <div className="hidden sm:inline-block">{username}</div>}
     </header>
   );

@@ -8,13 +8,13 @@ export async function getEvents() {
   const data = await res.json();
 
   // Optional: Convert Firebase object to array (if needed)
-//   const formattedData = Object.keys(data).map((id) => ({
-//     id,
-//     ...data[id],
-//   }));
+  const formattedData = Object.keys(data).map((id) => ({
+    id,
+    ...data[id],
+  }));
 
-//   return formattedData;
-    return data;
+  return formattedData;
+    // return data;
 }
 
 // "https://eventify-d2616-default-rtdb.firebaseio.com//events.json"

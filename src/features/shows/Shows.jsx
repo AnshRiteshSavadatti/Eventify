@@ -5,6 +5,7 @@ import Button from "../../UI/Button";
 
 function Shows() {
   const shows = useLoaderData();
+  console.log(shows);
 
   return (
     <div className="min-h-screen bg-gray-100 px-6 py-8">
@@ -25,10 +26,7 @@ function Shows() {
       </ul>
 
       <div className="mt-10 flex justify-center">
-        <Button
-          to="/cart"
-          type="primary"
-        >
+        <Button to="/cart" type="primary">
           Go to Cart 🛒
         </Button>
       </div>
