@@ -1,6 +1,6 @@
 export async function getEvents() {
   const res = await fetch(
-    "https://eventify-f64e9-default-rtdb.firebaseio.com/events.json"
+    "https://eventify-d2616-default-rtdb.firebaseio.com//events.json"
   );
 
   if (!res.ok) throw new Error("Failed in fetching data");
@@ -16,3 +16,6 @@ export async function getEvents() {
 //   return formattedData;
     return data;
 }
+
+// "https://eventify-d2616-default-rtdb.firebaseio.com//events.json"
+// // "https://eventify-f64e9-default-rtdb.firebaseio.com/events.json"
