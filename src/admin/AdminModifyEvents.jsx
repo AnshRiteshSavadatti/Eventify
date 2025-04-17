@@ -4,7 +4,6 @@ import postEvent from "../services/postEvent";
 
 function AdminModifyEvents() {
   const [formData, setFormData] = useState({
-    id: "",
     name: "",
     singername: "",
     address: "",
@@ -30,7 +29,6 @@ function AdminModifyEvents() {
     await postEvent(formData);
     alert("✅ Event added!");
     setFormData({
-      id: "",
       name: "",
       singername: "",
       address: "",
@@ -48,14 +46,14 @@ function AdminModifyEvents() {
         onSubmit={handleSubmit}
         className="grid grid-cols-2 gap-6 max-w-4xl"
       >
-        <input
+        {/* <input
           type="number"
           name="id"
           value={formData.id}
           onChange={handleChange}
           placeholder="ID"
           className="input"
-        />
+        /> */}
         <input
           type="text"
           name="name"
@@ -105,7 +103,9 @@ function AdminModifyEvents() {
           className="col-span-2 input"
         />
         <div className="col-span-2 flex justify-center mt-4">
-          <Button type="submit" type="primary">Add Event</Button>
+          <Button type="submit" type="primary">
+            Add Event
+          </Button>
         </div>
       </form>
     </div>

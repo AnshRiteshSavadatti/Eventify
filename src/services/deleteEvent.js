@@ -1,4 +1,9 @@
 export async function deleteEvent(id) {
+  if (!id) {
+    alert("❌ Cannot delete event — ID is undefined!");
+    return;
+  }
+
   const stringId = String(id);
 
   const res = await fetch(

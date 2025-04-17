@@ -10,7 +10,8 @@ function AdminDeleteItems() {
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
       {shows.map((show) => (
         <ShowAdminItems
-          key={show.name}
+          key={show.id}
+          id={show.id}
           image={show.image}
           cost={show.cost}
           name={show.name}
@@ -36,7 +37,13 @@ function ShowAdminItems({ id, name, image, cost, address }) {
           <p className="mt-2 text-red-600 font-medium text-xl">
             &#8377;{cost} per ticket
           </p>
-          <Button type="primary" onClick={() => deleteEvent(id)}>
+          <Button
+            type="primary"
+            onClick={() => {
+              console.log("Deleting ID:", id);
+              deleteEvent(id);
+            }}
+          >
             Delete
           </Button>
         </div>
